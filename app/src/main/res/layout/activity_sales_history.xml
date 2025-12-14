@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:text="Historial de Ventas"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="12dp"/>
+
+    <LinearLayout
+        android:id="@+id/layoutResumen"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="12dp"
+        android:background="#EEEEEE"
+        android:layout_marginBottom="12dp">
+
+        <TextView
+            android:id="@+id/txtTotalVentas"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Total de ventas: 0"
+            android:textStyle="bold"/>
+
+        <TextView
+            android:id="@+id/txtMontoTotal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Monto total: ₡0"/>
+
+        <TextView
+            android:id="@+id/txtProductoTop"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Producto más vendido: -"/>
+    </LinearLayout>
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvVentas"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+</LinearLayout>

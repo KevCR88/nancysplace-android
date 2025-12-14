@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    tools:context=".View.AddProductActivity">
+
+    <!-- Título -->
+    <TextView
+        android:id="@+id/txtTituloAdd"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="AÑADIR PRODUCTO"
+        android:textStyle="bold"
+        android:textSize="20sp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <!-- Imagen del producto -->
+    <ImageView
+        android:id="@+id/imgProducto"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:src="@drawable/ic_launcher_background"
+        android:background="#EEEEEE"
+        android:scaleType="centerCrop"
+        app:layout_constraintTop_toBottomOf="@id/txtTituloAdd"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="20dp" />
+
+    <!-- Botón seleccionar foto -->
+    <Button
+        android:id="@+id/btnGaleria"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Elegir de galería"
+        app:layout_constraintTop_toBottomOf="@id/imgProducto"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="12dp" />
+
+    <!-- Botón tomar foto -->
+    <Button
+        android:id="@+id/btnCamara"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Tomar foto"
+        app:layout_constraintTop_toBottomOf="@id/imgProducto"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="12dp" />
+
+    <!-- Nombre -->
+    <EditText
+        android:id="@+id/edtNombre"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="Nombre del producto"
+        app:layout_constraintTop_toBottomOf="@id/btnGaleria"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="20dp" />
+
+    <!-- Descripción -->
+    <EditText
+        android:id="@+id/edtDescripcion"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="Descripción"
+        app:layout_constraintTop_toBottomOf="@id/edtNombre"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="12dp" />
+
+    <!-- Precio -->
+    <EditText
+        android:id="@+id/edtPrecio"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="Precio"
+        android:inputType="numberDecimal"
+        app:layout_constraintTop_toBottomOf="@id/edtDescripcion"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="12dp" />
+
+    <!-- Stock -->
+    <EditText
+        android:id="@+id/edtCantidad"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="Cantidad en inventario"
+        android:inputType="number"
+        app:layout_constraintTop_toBottomOf="@id/edtPrecio"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="12dp" />
+
+    <!-- Botón Guardar -->
+    <Button
+        android:id="@+id/btnGuardarProducto"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="GUARDAR"
+        app:layout_constraintTop_toBottomOf="@id/edtCantidad"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="24dp" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

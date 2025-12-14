@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    tools:context=".View.SalesActivity">
+
+    <TextView
+        android:id="@+id/txtTituloVentas"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="REGISTRAR VENTA"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <!-- Categoría -->
+    <TextView
+        android:id="@+id/txtLabelCategoria"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Categoría:"
+        app:layout_constraintTop_toBottomOf="@id/txtTituloVentas"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="16dp" />
+
+    <Spinner
+        android:id="@+id/spnCategoriaVenta"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/txtTituloVentas"
+        app:layout_constraintStart_toEndOf="@id/txtLabelCategoria"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp" />
+
+    <!-- Producto -->
+    <TextView
+        android:id="@+id/txtLabelProducto"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Producto:"
+        app:layout_constraintTop_toBottomOf="@id/spnCategoriaVenta"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="16dp" />
+
+    <Spinner
+        android:id="@+id/spnProductoVenta"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/spnCategoriaVenta"
+        app:layout_constraintStart_toEndOf="@id/txtLabelProducto"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp" />
+
+    <!-- Info stock -->
+    <TextView
+        android:id="@+id/txtInfoStock"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Stock disponible: -"
+        app:layout_constraintTop_toBottomOf="@id/spnProductoVenta"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="16dp" />
+
+    <!-- Cantidad a vender -->
+    <EditText
+        android:id="@+id/edtCantidadVenta"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="Cantidad a vender"
+        android:inputType="number"
+        app:layout_constraintTop_toBottomOf="@id/txtInfoStock"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="16dp" />
+
+    <!-- Botón registrar -->
+    <Button
+        android:id="@+id/btnRegistrarVenta"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="REGISTRAR VENTA"
+        app:layout_constraintTop_toBottomOf="@id/edtCantidadVenta"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="24dp" />
+    <Button
+        android:id="@+id/btnVerHistorial"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Ver historial de ventas"
+        android:layout_marginTop="12dp"/>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
