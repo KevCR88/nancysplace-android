@@ -65,7 +65,7 @@ class SalesActivity : AppCompatActivity() {
         adapterCategorias.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item)
         spnCategoria.adapter = adapterCategorias
 
-        // Cuando se selecciona una categoría, cargamos productos de esa categoría
+        // Cuando se selecciona una categoría, se cargan los productos de esa categoría
         spnCategoria.onItemSelectedListener = object : AdapterView.OnItemSelectedListener {
             override fun onItemSelected(
                 parent: AdapterView<*>?,
@@ -82,7 +82,7 @@ class SalesActivity : AppCompatActivity() {
             }
         }
 
-        // Cuando se selecciona un producto, actualizamos info de stock
+        // Cuando se selecciona un producto, se actualiza el stock
         spnProducto.onItemSelectedListener = object : AdapterView.OnItemSelectedListener {
             override fun onItemSelected(
                 parent: AdapterView<*>?,

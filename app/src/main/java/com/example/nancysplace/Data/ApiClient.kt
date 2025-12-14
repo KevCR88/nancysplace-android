@@ -15,7 +15,7 @@ import java.net.URL
 
 object ApiClient {
 
-    // ⚠️ Asegúrate de que esta IP es la de tu PC en el hotspot del cel
+    // Aca va la direccion dada por PythonAnyWhere
     private const val BASE_URL = "https://kevincr88.pythonanywhere.com/"
 
     fun login(username: String, password: String, onResult: (Boolean) -> Unit) {
@@ -73,7 +73,7 @@ object ApiClient {
                         val obj = arr.getJSONObject(i)
 
                         val p = Product(
-                            id = obj.optInt("id"),                   // Int? encaja perfectamente
+                            id = obj.optInt("id"),
                             nombre = obj.optString("nombre"),
                             descripcion = obj.optString("descripcion"),
                             precio = obj.optDouble("precio"),
@@ -206,7 +206,7 @@ object ApiClient {
                         val obj = arr.getJSONObject(i)
 
                         val s = Sale(
-                            // id del backend es Int, pero tu Sale tiene id String → no lo usamos
+
                             productId = obj.optInt("product_id"),
                             productName = obj.optString("product_name"),
                             quantity = obj.optInt("quantity"),

@@ -4,7 +4,7 @@ import com.example.nancysplace.Entity.Product
 
 object ProductRepository {
 
-    // Lista de productos temporal (simulando base de datos)
+
     val productos = mutableListOf<Product>()
 
     fun agregarProducto(producto: Product) {

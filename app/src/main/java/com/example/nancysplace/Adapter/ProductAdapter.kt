@@ -32,18 +32,18 @@ class ProductAdapter(
         holder.txtNombre.text = p.nombre
         holder.txtInfo.text = "Stock: ${p.cantidad}"
 
-        // Buscamos el campo de texto Base64
+        // Se busca el campo de texto Base64
         val base64String = p.imagen_base64
 
         if (!base64String.isNullOrEmpty()) {
             try {
-                //Decodificamos: De Texto Base64 -> a Bytes
+                //Se decodifica: De Texto Base64 -> a Bytes
                 val imageBytes = android.util.Base64.decode(base64String, android.util.Base64.DEFAULT)
 
-                // Creamos el Bitmap
+                // Se crea el Bitmap
                 val bmp = BitmapFactory.decodeByteArray(imageBytes, 0, imageBytes.size)
 
-                // Lo mostramos
+                // Se muestra
                 holder.imgProducto.setImageBitmap(bmp)
 
             } catch (e: Exception) {

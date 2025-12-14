@@ -24,7 +24,7 @@ class ProductActivity : AppCompatActivity() {
         // Botón flotante para añadir producto
         val fabAddProduct = findViewById<FloatingActionButton>(R.id.fabAddProduct)
 
-        // Listeners (de momento solo mostramos un Toast para probar)
+
 
         cardCremas.setOnClickListener {
             val intent = Intent(this, ProductListActivity::class.java)

@@ -65,7 +65,7 @@ class AddProductActivity : AppCompatActivity() {
                 // 2. Guardarla en la variable global por si acaso
                 imgBitmap = bitmap
 
-                // 3. ¡IMPORTANTE! Convertirla a texto para la API
+                // 3. Aca se convierte a texto para la API
                 stringImagenFoto = bitmapToBase64(bitmap)
 
             } else {
@@ -127,11 +127,11 @@ class AddProductActivity : AppCompatActivity() {
                 cantidad = cantidad,
                 categoria = intent.getStringExtra("categoria") ?: "Sin categoría",
 
-                // AQUÍ EL CAMBIO: Enviamos el texto Base64, no los bytes
+                // Aca se da el cambio, se envia el texto Base64, no los bytes
                 imagen_base64 = stringImagenFoto
             )
 
-            // Llamamos a la API
+            // Se llama a la API
             ApiClient.postProduct(nuevo) { ok ->
                 if (ok) {
                     Toast.makeText(this, "Producto guardado con foto", Toast.LENGTH_SHORT).show()

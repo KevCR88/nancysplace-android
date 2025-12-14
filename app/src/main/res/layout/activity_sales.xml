@@ -82,21 +82,28 @@
         android:layout_marginTop="16dp" />
 
     <!-- Botón registrar -->
+
     <Button
         android:id="@+id/btnRegistrarVenta"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="80dp"
         android:text="REGISTRAR VENTA"
-        app:layout_constraintTop_toBottomOf="@id/edtCantidadVenta"
-        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        android:layout_marginTop="24dp" />
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/edtCantidadVenta" />
+
     <Button
         android:id="@+id/btnVerHistorial"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginTop="124dp"
         android:text="Ver historial de ventas"
-        android:layout_marginTop="12dp"/>
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/btnRegistrarVenta" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
