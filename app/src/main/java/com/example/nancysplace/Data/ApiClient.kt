@@ -161,7 +161,7 @@ object ApiClient {
                     put("product_id", venta.productId)
                     put("quantity", venta.quantity)
                     put("unit_price", venta.unitPrice)
-                    // si algún día quieres enviar fecha u otro dato, aquí se agrega
+
                 }
 
                 conn.outputStream.use { os ->
